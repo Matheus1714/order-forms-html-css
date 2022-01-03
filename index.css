@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background-color: #ccc;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    border-radius: 5px;
+    background-color: #ccccccb1;
+}
+
+body{
+    background-color: #f1e8e6;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+h1{
+    text-align: center;
+}
+
+.container{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 400px;
+    width: 400px;
+    margin: 10px;
+}
+
+textarea, .box #result{
+    width: 100%;
+    height: 500px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #543c5290;
+    border-radius: 10px;
+    background-color: #543c52;
+    font-size: 16px;
+    resize: none;
+    color: #edd2cb;
+    outline: none;
+    box-shadow: #f1e8e6;
+}
+
+.box #result{
+    background-color: #361d32;
+    overflow-y: scroll;
+}
+
+button{
+    min-width: 400px;
+    height: 50px;
+    font-size: large;
+    background-color: #f55951;
+    border: none;
+    border-radius: 10px;
+    outline: inherit;
+    color: #edd2cb;
+    font-weight: 800;
+}
+
+button:hover{
+    background-color: #f5595190;
+}
+
+button:active{
+    background-color: #f5595180;
+}
+
+footer{
+    margin: 40px;
+}
+
+.result-text:hover{
+    background-color: #543c52;
+}
+
+@media(max-width:700px){
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    body{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
