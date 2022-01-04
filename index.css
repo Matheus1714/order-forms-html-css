@@ -1,3 +1,5 @@
+/* Pallet: https://colors.muz.li/palette/361d32/543c52/f55951/edd2cb/f1e8e6 */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 *{
@@ -26,11 +28,12 @@
 }
 
 body{
-    background-color: #f1e8e6;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: linear-gradient(
+    150deg, #edd2cb 0%, #edd2cb 50%, #956a92 50%, #956a92 100%);
 }
 
 main{
@@ -43,6 +46,10 @@ main{
 
 h1{
     text-align: center;
+    margin: 50px auto 50px;
+    display: none;
+    font-size: 40px;
+    color: #000;
 }
 
 .container{
@@ -74,7 +81,30 @@ textarea, .box #result{
     resize: none;
     color: #edd2cb;
     outline: none;
-    box-shadow: #f1e8e6;
+    box-shadow: #edd2cb;
+}
+
+.box{
+    position: relative;
+}
+
+.copy{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #d5c3d4;
+}
+
+.copy .icon:hover::after{
+    content: attr(data-tooltip);
+}
+
+.copy .icon:hover{
+    color: #c0a5be;
+}
+
+.copy .icon:active{
+    color: #956a92;
 }
 
 .box #result{
@@ -82,7 +112,7 @@ textarea, .box #result{
     overflow-y: scroll;
 }
 
-button{
+.box-btn button{
     min-width: 350px;
     height: 50px;
     font-size: large;
@@ -94,11 +124,11 @@ button{
     font-weight: 800;
 }
 
-button:hover{
+.box-btn button:hover{
     background-color: #f5595190;
 }
 
-button:active{
+.box-btn button:active{
     background-color: #f5595180;
 }
 
@@ -110,6 +140,11 @@ footer{
     background-color: #543c52;
 }
 
+img{
+    width: 30px;
+    height: auto;
+}
+
 @media(max-width:700px){
     .container{
         display: flex;
@@ -118,6 +153,11 @@ footer{
     body{
         display: flex;
         flex-wrap: wrap;
+        background: linear-gradient(#edd2cb 0%, #edd2cb 50%, #956a92 50%, #956a92 100%);
+    }
+    button{
+        min-width: 260px;
+        width: 100%;
     }
     main{
         margin-left: 20px;
@@ -126,5 +166,19 @@ footer{
     .box{
         width: 100%;
         min-width: 100%;
+    }
+    footer{
+        text-align: center;
+        width: 100%;
+        opacity: 0.5;
+    }
+    .ribbon{
+        display: none;
+    }
+    .ribbon-content{
+        display: none;
+    }
+    h1{
+        display: block;
     }
 }
